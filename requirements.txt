@@ -1,0 +1,13 @@
+keras==2.8.0
+librosa==0.10.1
+numpy==1.23.5
+nvidia_tensorflow==1.15.5+nv23.03
+pandas==2.0.3
+scikit_learn==1.3.2
+tensorflow==2.13.0
+tensorflow_gpu==2.8.0
+torch==1.13.0
+torchaudio==0.13.0
+tqdm==4.66.2
+transformers==4.37.2
+torch==2.0.0
