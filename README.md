@@ -9,11 +9,27 @@ We propose a diacritic restoration framework for speech data. Unlike traditional
 <img width="1318" alt="attention_example_2" src="https://github.com/SaraShatnawi/Diacritization/assets/49264609/09e84346-5682-49a0-aa57-4a2e5a34f7ef">
 
 # Models
-1. Text based with Tashkeela: a text-only model trained on Tashkeela and fine-tuned with CLArTTS.
-2. Text_based_without_Tashkeela: a text-only model trained only on CLArTTS.
+1. Text-based with Tashkeela: a text-only model trained on Tashkeela and fine-tuned with CLArTTS.
+2. Text-based without Tashkeela: a text-only model trained only on CLArTTS.
 3. Text+ASR with Tashkeela: a Text+ASR model trained on Tashkeela for text and fine-tuned with CLArTTS.
 4. Text+ASR without Tashkeelh: a Text+ASR model trained only with CLArTTS.
 * For each one of the above, there are Transformer and LSTM versions.
 # ![image](https://github.com/SaraShatnawi/Diacritization/assets/49264609/19d1f469-f0fc-4346-9dc8-38c017dbd8fc) Environment & Installation
+<h3> Prerequisites</h3>
 
+
+* Tested with Python 3.8
+* Install the required packages listed in requirements.txt file
+
+   * pip install -r requirements.txt
+
+ # Citition
+        @misc{shatnawi2023automatic,                                                                            
+      title={Automatic Restoration of Diacritics for Speech Data Sets}, 
+      author={Sara Shatnawi and Sawsan Alqahtani and Hanan Aldarmaki},
+      year={2023},
+      eprint={2311.10771},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 
