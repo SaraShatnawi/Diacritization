@@ -8,4 +8,6 @@ We propose a diacritic restoration framework for speech data. Unlike traditional
 
 <img width="1318" alt="attention_example_2" src="https://github.com/SaraShatnawi/Diacritization/assets/49264609/09e84346-5682-49a0-aa57-4a2e5a34f7ef">
 
+# ![image](https://github.com/SaraShatnawi/Diacritization/assets/49264609/19d1f469-f0fc-4346-9dc8-38c017dbd8fc) Environment & Installation
+
 
