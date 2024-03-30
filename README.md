@@ -14,6 +14,9 @@ We propose a diacritic restoration framework for speech data. Unlike traditional
 3. Text+ASR with Tashkeela: a Text+ASR model trained on Tashkeela for text and fine-tuned with CLArTTS.
 4. Text+ASR without Tashkeelh: a Text+ASR model trained only with CLArTTS.
 * For each one of the above, there are Transformer and LSTM versions.
+
+You can find the fine-tuned whisper here [here](huggingface.co/sashat/whisper-medium-ClassicalAr).
+
 # ![image](https://github.com/SaraShatnawi/Diacritization/assets/49264609/19d1f469-f0fc-4346-9dc8-38c017dbd8fc) Environment & Installation
 <h3> Prerequisites</h3>
 
