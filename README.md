@@ -27,7 +27,7 @@ You can find the fine-tuned whisper here [here](huggingface.co/sashat/whisper-me
    * pip install -r requirements.txt
 
  # Citition
-       @inproceedings{shatnawi2023automatic,
+    @inproceedings{shatnawi2023automatic,
     title={Automatic Restoration of Diacritics for Speech Data Sets},
     author={Shatnawi, Sara and Alqahtani, Sawsan and Aldarmaki, Hanan},    
     booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)”,
