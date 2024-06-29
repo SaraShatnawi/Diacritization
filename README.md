@@ -1,10 +1,15 @@
-# Towards Automatic Restoration of Diacritics for Speech Data Sets
+<div align="center">
+  
+# Automatic Restoration of Diacritics for Speech Data Set
 Sara Shatnawi, Sawsan Alqahtani, Hanan Aldarmaki <br> 
-Mohamed bin Zayed University of Artificial Intelligence, Abu Dhabi, UAE <br>
-[![image](https://github.com/SaraShatnawi/Diacritization/assets/49264609/11fcd298-8569-417a-93f8-fbd3d6764dd2)](https://arxiv.org/abs/2311.10771)
+**NAACL 2024**
 
-# Introduction
-We propose a diacritic restoration framework for speech data. Unlike traditional text-based methods, this model leverages the power of both speech and text. It utilizes a fine-tuned pre-trained automatic speech recognition model (Whisper) to generate an initial, noisy diacritized version of the speech transcript. This noisy transcript is then combined with the original text and fed into a diacritic restoration model.  The proposed approach achieved significant improvements in diacritic restoration performance compared to text-only models, paving the way for more robust speech-based diacritic restoration.
+[![image](https://github.com/SaraShatnawi/Diacritization/assets/49264609/11fcd298-8569-417a-93f8-fbd3d6764dd2)](https://aclanthology.org/2024.naacl-long.233.pdf)
+
+</div>
+
+# Abstract
+Automatic text-based diacritic restoration models generally have high diacritic error rates when applied to speech transcripts as a result of domain and style shifts in spoken language. In this work, we explore the possibility of improving the performance of automatic diacritic restoration when applied to speech data by utilizing parallel spoken utterances. In particular, we use the pre-trained Whisper ASR model fine-tuned on relatively small amounts of diacritized Arabic speech data to produce rough diacritized transcripts for the speech utterances, which we then use as an additional input for diacritic restoration models. The proposed framework consistently improves diacritic restoration performance compared to text-only baselines. Our results highlight the inadequacy of current text-based diacritic restoration models for speech data sets and provide a new baseline for speech-based diacritic restoration.
 
 <img width="1318" alt="attention_example_2" src="https://github.com/SaraShatnawi/Diacritization/assets/49264609/09e84346-5682-49a0-aa57-4a2e5a34f7ef">
 
@@ -13,9 +18,9 @@ We propose a diacritic restoration framework for speech data. Unlike traditional
 2. Text-based without Tashkeela: a text-only model trained only on CLArTTS.
 3. Text+ASR with Tashkeela: a Text+ASR model trained on Tashkeela for text and fine-tuned with CLArTTS.
 4. Text+ASR without Tashkeelh: a Text+ASR model trained only with CLArTTS.
-* For each one of the above, there are Transformer and LSTM versions.
+* For each one of the above, there are Transformer and LSTM versions for the text encoders.
 
-You can find the fine-tuned whisper here [here](huggingface.co/sashat/whisper-medium-ClassicalAr).
+Text+ASR models use an external ASR system, a fine-tuned Whisper, to pre-process speech. You can [find the fine-tuned whisper here](huggingface.co/sashat/whisper-medium-ClassicalAr).
 
 # ![image](https://github.com/SaraShatnawi/Diacritization/assets/49264609/19d1f469-f0fc-4346-9dc8-38c017dbd8fc) Environment & Installation
 <h3> Prerequisites</h3>
@@ -27,17 +32,29 @@ You can find the fine-tuned whisper here [here](huggingface.co/sashat/whisper-me
    * pip install -r requirements.txt
 
  # Citition
-    @inproceedings{shatnawi2023automatic,
-    title={Automatic Restoration of Diacritics for Speech Data Sets},
-    author={Shatnawi, Sara and Alqahtani, Sawsan and Aldarmaki, Hanan},    
-    booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)”,
-    year = "2024”,
-    publisher = "Association for Computational Linguistics",
-}
+ If you use the above model, please cite the following paper: 
+ ```
+  @inproceedings{shatnawi2024automatic,
+  title={Automatic Restoration of Diacritics for Speech Data Sets},
+  author={Shatnawi, Sara and Alqahtani, Sawsan and Aldarmaki, Hanan},
+  booktitle={Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)},
+  pages={4166--4176},
+  year={2024}
+  }
+```
 
+<div align="center">
+  
 # Data Augmentation for Speech-Based Diacritic Restoration
 Sara Shatnawi, Sawsan Alqahtani, Shady Shehata, Hanan Aldarmaki <br> 
-Mohamed bin Zayed University of Artificial Intelligence, Abu Dhabi, UAE <br>
+Mohamed bin Zayed University of Artificial Intelligence <br>
+**ArabicNLP 2024**
+
+</div>
+
+# Abstract
+This paper describes a data augmentation technique for boosting the performance of speech-based diacritic restoration. Our experiments demonstrate the utility of this approach, resulting in improved generalization of all models across different test sets. In addition, we describe the first multi-modal diacritic restoration model, utilizing both speech and text as input modalities. This type of model can be used to diacritize speech transcripts. Unlike previous work that relies on an external ASR model, the proposed model is far more compact and efficient. While the multi-modal framework does not surpass the ASR-based model for this task, it offers a promising approach for improving the efficiency of speech-based diacritization, with a potential for improvement using data augmentation and other methods.
+
 ## Data Augmentation Rules 
 ### Replacement Rules
 * Sukoon or Shaddah if they appear at the first letter of the word (i.e.,مْقعد ).
@@ -59,12 +76,15 @@ Mohamed bin Zayed University of Artificial Intelligence, Abu Dhabi, UAE <br>
 
 
  # Citition
+If you use the data augmentation or multi-modal model, please cite the following paper:
+ ```
     @inproceedings{shatnawi2024data,
     title={Data Augmentation for Speech-Based Diacritic Restoration},
-    author={Shatnawi, Sara and Alqahtani, Sawsan and and Shehata, Shady Aldarmaki, Hanan},    
-    booktitle = "SIGARAB ArabicNLP 2024 Conference”,
-    year = "2024",
+    author={Shatnawi, Sara and Alqahtani, Sawsan and Shehata, Shady and Aldarmaki, Hanan},    
+    booktitle={Proceedings of ArabicNLP 2024},
+    year={2024}
     }
+```
     
 
 
